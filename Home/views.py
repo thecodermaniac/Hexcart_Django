@@ -35,9 +35,8 @@ def contacts(request):
     if request.method == "POST":
         name = request.POST.get("name", "")
         email = request.POST.get("email", "")
-        Phone = request.POST.get("phone", "")
         Expmsg = request.POST.get("Messages",'')
-        contact = Contact(name=name, email=email, phone=Phone, msg=Expmsg)
+        contact = Contact(name=name, email=email, msg=Expmsg)
         contact.save()
 
     return render(request, "Home/ContactUs.html")
@@ -57,9 +56,8 @@ def checkout(request):
         address=request.POST.get("address", "")
         city=request.POST.get("city", "")
         state=request.POST.get("state", "")
-        Phone = request.POST.get("phone", "")
         zip_code=request.POST.get("zipCode", "")
-        order = Order(name=name, email=email, phone=Phone,address=address,Zip_code=zip_code,city=city,state=state,items_json=itemJSoN)
+        order = Order(name=name, email=email,address=address,Zip_code=zip_code,city=city,state=state,items_json=itemJSoN)
         order.save()
     return render(request,"Home/Cart.html",pdt)
 

@@ -16,7 +16,6 @@ class Contact(models.Model):
     msg_id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=25,default='')
     email=models.CharField(max_length=50,default='')
-    phone=models.IntegerField(default=0)
     msg=models.CharField(max_length=200,default='')
 
     def __str__(self):
