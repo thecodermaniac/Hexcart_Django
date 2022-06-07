@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'Home/ProductView.css' %}" />
+  <body>
+    <nav>
+      <ul class="navItems">
+        <li>
+          <span class="nav"></span><span class="nav"></span
+          ><span class="nav"></span>
+        </li>
+        <li><a href="/Home/" class="navLinks">Home</a></li>
+        <li><a href="/Home/AboutUs" class="navLinks"> About us </a></li>
+        <li><a href="/Home/Tracker" class="navLinks">Tracker</a></li>
+        <li><a href="/Home/ContactUs" class="navLinks"> Contact us </a></li>
+        <li><input type="text" /></li>
+        <button class="navBtn">Search</button>
+        <a href="/Home/Cart">
+          <button class="navBtn">
+            Cart (<span class="cartno">0</span>)
+          </button></a
+        >
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="imgBlock">
+        <img src="/media/{{onepdts.0.image}}" />
+        <br />
+        <button class="cart" id="{{onepdts.0.id}}">Add to Cart</button>
+        <button class="Buy">Buy Now</button>
+      </div>
+      <div class="infoBlock">
+        <p id="pr{{onepdts.0.id}}">{{onepdts.0.product_name}}</p>
+        <p>{{onepdts.0.descp}}</p>
+        <p>₹{{onepdts.0.price}}</p>
+      </div>
+    </div>
+    <div class="buyNow">
+      <form action="http://127.0.0.1:8000/Home/Cart" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="itemJson" id="itemJson" value="" />
+        <label for="">Name</label>
+        <input type="text" placeholder="Name" name="name" />
+        <label for="">Email</label>
+        <input type="text" placeholder="Email" name="email" />
+        <label for="">Address</label>
+        <input type="text" name="address" />
+        <label for="">City</label>
+        <input type="text" name="city" />
+        <label for="">State</label>
+        <input type="text" placeholder="Enter State" name="state" />
+        <label for="">Zip Code</label>
+        <input type="number" name="zipCode" />
+        <label for="">Phone Number</label>
+        <input type="tel" name="phone" />
+        <button class="orderbtn">Place Order</button>
+      </form>
+    </div>
+  </body>
+  <script src="{% static 'Home/productview.js' %}"></script>
+</html>

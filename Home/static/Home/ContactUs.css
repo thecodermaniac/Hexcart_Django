@@ -1,0 +1,74 @@
+.navItems li{
+    list-style: none;
+    display: inline-block;
+    color: rgb(232, 253, 255);
+    margin-right: 20px;
+    margin-left: 0;
+    font-size: larger;
+    margin-top: 9px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navLinks{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background: rgba(130, 130, 130, 0.783);
+}
+ul{
+    padding-left: 18px;
+    margin: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: auto;
+    padding: 5px;
+    background: rgb(47, 47, 47);
+}
+.nav{
+    height: 3px;
+    background-color: rgb(254, 153, 37);
+    display:block;
+    margin-top: 3px;
+    margin-right: 20px;
+    margin-left: 0;
+    width: 40px;
+}
+form{
+    width: 100%;
+}
+.formContainer{
+    margin: 6%;
+    display: flex;
+}
+.FormInputs{
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 0px;
+}
+.FormMsg{
+    display: block;
+    width: 100%;
+    height: 125px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 0px;
+}
+.submit{
+    display: inline-block;
+    background: rgb(4, 92, 133);
+    border: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 71px;
+    padding: 14px;
+    color: rgb(255, 255, 255);
+}

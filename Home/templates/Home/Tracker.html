@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'Home/Tracker.css' %}" />
+  <body>
+    <nav>
+      <ul class="navItems">
+        <li>
+          <span class="nav"></span><span class="nav"></span
+          ><span class="nav"></span>
+        </li>
+        <li><a href="/Home/" class="navLinks">Home</a></li>
+        <li><a href="/Home/AboutUs" class="navLinks"> About us </a></li>
+        <li><a href="/Home/Tracker" class="navLinks">Tracker</a></li>
+        <li><a href="/Home/ContactUs" class="navLinks"> Contact us </a></li>
+        <a href="/Home/Cart">
+          <button class="navBtn">
+            Cart (<span class="cartno">0</span>)
+          </button></a
+        >
+      </ul>
+    </nav>
+    {% for item in Orders %}
+    <div class="ordersList">
+      <h2>Order ID:- {{item.order_id}}</h1>
+      <p>Customer Name: {{item.name}}</p>
+      <p>Customer E-mail: {{item.email}}</p>
+      <p>Delivery Address: {{item.address}}</p>
+      <div id="Order ID:- {{item.order_id}}">
+       {{item.items_json}}
+      </div>
+    </div>
+    {% endfor %}
+  </body>
+  <script src="{% static 'Home/Tracker.js' %}"></script>
+</html>

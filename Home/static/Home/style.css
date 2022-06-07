@@ -1,0 +1,102 @@
+.navItems li{
+    list-style: none;
+    display: inline-block;
+    color: rgb(232, 253, 255);
+    margin-right: 20px;
+    margin-left: 0;
+    font-size: larger;
+    margin-top: 9px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navLinks{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background: rgba(130, 130, 130, 0.783);
+}
+ul{
+    padding-left: 18px;
+    margin: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: auto;
+    padding: 5px;
+    background: rgb(47, 47, 47);
+}
+.nav{
+    height: 3px;
+    background-color: rgb(254, 153, 37);
+    display:block;
+    margin-top: 3px;
+    margin-right: 20px;
+    margin-left: 0;
+    width: 40px;
+}
+
+
+.pdtContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+}
+.pdt{
+    background-color: rgb(47, 47, 47);
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 9px;
+}
+img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+	object-position: 20% 15%;
+}
+.cart{
+    display: inline-block;
+    background: rgb(4, 92, 133);
+    border: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 49%;
+    color: rgb(255, 255, 255);
+}
+.pdtview{
+    display: inline-block;
+    background: rgb(4, 92, 133);
+    border: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 49%;
+    color: rgb(255, 255, 255);
+}
+.pdtview:hover{
+    background: rgb(52, 142, 183);
+}
+.cart:hover{
+    background: rgb(52, 142, 183);
+}
+.pdtcategory{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.navBtn{
+    background: rgba(174, 172, 172, 0.783);
+    padding: 5px;
+    color: white;
+    font-family:Roboto;
+    margin-left: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+

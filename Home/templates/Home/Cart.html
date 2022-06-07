@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'Home/Cart.css' %}" />
+  <body>
+    <nav>
+      <ul class="navItems">
+        <li>
+          <span class="nav"></span><span class="nav"></span
+          ><span class="nav"></span>
+        </li>
+        <li><a href="/Home/" class="navLinks">Home</a></li>
+        <li><a href="/Home/AboutUs" class="navLinks"> About us </a></li>
+        <li><a href="/Home/Tracker" class="navLinks">Tracker</a></li>
+        <li><a href="/Home/ContactUs" class="navLinks"> Contact us </a></li>
+        <a href="/Home/Cart">
+          <button class="navBtn">
+            Cart (<span class="cartno">0</span>)
+          </button></a
+        >
+      </ul>
+    </nav>
+    <div class="carts"></div>
+    <button class="clr">Clear Cart</button>
+    <div class="order">
+      <form action="Cart" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="itemJson" id="itemJson" value="" />
+        <label for="">Name</label>
+        <input type="text" placeholder="Name" name="name" />
+        <label for="">Email</label>
+        <input type="text" placeholder="Email" name="email" />
+        <label for="">Address</label>
+        <input type="text" name="address" />
+        <label for="">City</label>
+        <input type="text" name="city" />
+        <label for="">State</label>
+        <input type="text" placeholder="Enter State" name="state" />
+        <label for="">Zip Code</label>
+        <input type="number" name="zipCode" />
+        <label for="">Phone Number</label>
+        <input type="tel" name="phone" />
+        <button class="orderbtn">Place Order</button>
+      </form>
+    </div>
+  </body>
+  <script src="{% static 'Home/Cart.js' %}"></script>
+</html>

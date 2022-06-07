@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'Home/ContactUs.css' %}" />
+  <body>
+    <nav>
+      <ul class="navItems">
+        <li>
+          <span class="nav"></span><span class="nav"></span
+          ><span class="nav"></span>
+        </li>
+        <li><a href="/Home/" class="navLinks">Home</a></li>
+        <li><a href="/Home/AboutUs" class="navLinks"> About us </a></li>
+        <li><a href="/Home/Tracker" class="navLinks">Tracker</a></li>
+        <li><a href="/Home/ContactUs" class="navLinks"> Contact us </a></li>
+      </ul>
+    </nav>
+    yo baby!!
+    <div class="formContainer">
+      <form action="ContactUs" method="post">
+        {% csrf_token %}
+
+        <h1>Contact Us</h1>
+
+        <label for="">Name</label>
+        <input type="text" placeholder="Enter Your Name" class="FormInputs" name="name"/>
+        <label for="">E-mail Address</label>
+        <input
+          type="text"
+          placeholder="Enter E-mail Address"
+          class="FormInputs"
+          name="email"
+        />
+        <label for="">Phone</label>
+        <input type="number" placeholder="Enter Phone Number" class="FormInputs" name="phone"/>
+        <label for="">Messages(Optional)</label>
+        <textarea class="FormMsg" name="Messages"></textarea>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

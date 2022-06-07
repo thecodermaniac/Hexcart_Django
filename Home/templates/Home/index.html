@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'Home/style.css' %}" />
+  
+  <body>
+    <nav>
+      <ul class="navItems">
+        <li><span class="nav"></span><span class="nav"></span><span class="nav"></span></li>
+        <li> <a href="/Home/" class="navLinks">Home</a></li>
+        <li> <a href="/Home/AboutUs" class="navLinks"> About us </a></li>
+        <li><a href="/Home/Tracker" class="navLinks">Tracker</a></li>
+        <li> <a href="/Home/ContactUs" class="navLinks"> Contact us </a></li>
+        <li><input type="text" /></li>
+       <button class="navBtn">Search</button>
+       <a href="/Home/Cart"> <button class="navBtn">Cart (<span class="cartno">0</span>) </button></a>
+      </ul>
+    </nav>
+      {% for item in product %}
+      <div class="pdtContainer">
+        <h1>{{item.0.category}}</h1>
+        <div class="pdtcategory">
+          {% for i in item %}
+          <div class="pdt">
+            <img src="/media/{{i.image}}" alt="" />
+            <h2 id="pr{{i.id}}">{{i.product_name}}</h2>
+            <h3>₹{{i.price}}</h3>
+            <p>{{i.descp|slice:"0:40"}} ...</p>
+            <button class="cart" id="{{i.id}}">Add to Cart</button>
+            <a href="/Home/Products/{{i.id}}"> <button class="pdtview" id="{{i.id}}">Quick View</button></a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    
+  </body>
+  <script src="{% static 'Home/scriptfile.js' %}"></script>
+</html>
