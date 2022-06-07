@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="buyNow">
-      <form action="http://127.0.0.1:8000/Cart" method="post">
+      <form action="/Cart" method="post">
         {% csrf_token %}
         <input type="hidden" name="itemJson" id="itemJson" value="" />
         <label for="">Name</label>
