@@ -33,7 +33,7 @@
             <h3>₹{{i.price}}</h3>
             <p>{{i.descp|slice:"0:40"}} ...</p>
             <button class="cart" id="{{i.id}}">Add to Cart</button>
-            <a href="/Home/Products/{{i.id}}"> <button class="pdtview" id="{{i.id}}">Quick View</button></a>
+            <a href="Products/{{i.id}}"> <button class="pdtview" id="{{i.id}}">Quick View</button></a>
           </div>
           {% endfor %}
         </div>

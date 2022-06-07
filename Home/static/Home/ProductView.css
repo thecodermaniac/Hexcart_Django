@@ -51,6 +51,8 @@ img{
     margin: 2%;
 }
 .imgBlock{
+    background-color: rgb(47, 47, 47);
+    color: aliceblue;
     padding: 10px;
     border-radius: 9px;
 }
