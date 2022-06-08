@@ -28,7 +28,7 @@
         <div class="pdtcategory">
           {% for i in item %}
           <div class="pdt">
-            <img src="/media/{{i.image}}" alt="" />
+            <img src="{{i.image}}" alt="" />
             <h2 id="pr{{i.id}}">{{i.product_name}}</h2>
             <h3>₹{{i.price}}</h3>
             <p>{{i.descp|slice:"0:40"}} ...</p>

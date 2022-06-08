@@ -8,7 +8,7 @@ class Product(models.Model):
     product_id=models.AutoField
     product_name=models.CharField(max_length=25,default="")
     descp=models.CharField(max_length=100,default="")
-    image=models.ImageField(upload_to="Home/images",default="")
+    image=models.URLField(max_length=200,default='')
     price=models.IntegerField(default=0)
     category=models.CharField(max_length=20,default="")
 
